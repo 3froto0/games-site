@@ -1,1 +1,110 @@
-index.html
+index.html 
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎮 ألعاب مجانية</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: linear-gradient(90deg,#ff416c,#ff4b2b);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.game-card {
+    background: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+.game-card img {
+    width: 100%;
+    display: block;
+}
+.game-card .content {
+    padding: 15px;
+}
+.game-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.3em;
+    color: #ff416c;
+}
+.game-card p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: #ccc;
+    height: 60px;
+    overflow: hidden;
+}
+.game-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #ff416c;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.game-card a:hover {
+    background: #ff4b2b;
+}
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #888;
+}
+</style>
+</head>
+<body>
+
+<header>🎮 ألعاب مجانية</header>
+
+<div class="games-container" id="games">
+<!-- سيتم ملء الألعاب من games.json -->
+</div>
+
+<footer>© 2026 Egg Games. جميع الحقوق محفوظة.</footer>
+
+<script>
+const gamesData = [{"title":"Overwatch 2","thumbnail":"https://www.freetogame.com/g/540/thumbnail.jpg","short_description":"A hero-focused first-person team shooter from Blizzard Entertainment.","game_url":"https://www.freetogame.com/open/overwatch-2"},{"title":"PUBG: BATTLEGROUNDS","thumbnail":"https://www.freetogame.com/g/516/thumbnail.jpg","short_description":"Get into the action in one of the longest running battle royale games PUBG Battlegrounds.","game_url":"https://www.freetogame.com/open/pubg"},{"title":"Enlisted","thumbnail":"https://www.freetogame.com/g/508/thumbnail.jpg","short_description":"Get ready to command your own World War II military squad in Gaijin and Darkflow Software’s MMO squad-based shooter Enlisted. ","game_url":"https://www.freetogame.com/open/enlisted"},{"title":"FragPunk","thumbnail":"https://www.freetogame.com/g/604/thumbnail.jpg","short_description":"A free-to-play 5v5 hero shooter that uses cards to modify matches.","game_url":"https://www.freetogame.com/open/fragpunk"},{"title":"Throne And Liberty","thumbnail":"https://www.freetogame.com/g/590/thumbnail.jpg","short_description":"A free-to-play multi-platorm MMORPG from NCSoft and Amazon Games.","game_url":"https://www.freetogame.com/open/throne-and-liberty"},{"title":"Fall Guys","thumbnail":"https://www.freetogame.com/g/523/thumbnail.jpg","short_description":"Play the most competitive massively multiplayer party royale game featuring beans ever for free on a variety of platforms. ","game_url":"https://www.freetogame.com/open/fall-guys"},{"title":"Game Of Thrones Winter Is Coming","thumbnail":"https://www.freetogame.com/g/340/thumbnail.jpg","short_description":"A free-to-play browser-based RTS based on the George R.R. Martin novels and popular HBO series.","game_url":"https://www.freetogame.com/open/game-of-thrones-winter-is-coming"},{"title":"Elvenar","thumbnail":"https://www.freetogame.com/g/347/thumbnail.jpg","short_description":"A browser based city-building strategy MMO set in the fantasy world of Elvenar.","game_url":"https://www.freetogame.com/open/elvenar"},{"title":"Neverwinter","thumbnail":"https://www.freetogame.com/g/11/thumbnail.jpg","short_description":"A free-to-play 3D action MMORPG based on the acclaimed Dungeons & Dragons fantasy roleplaying game. ","game_url":"https://www.freetogame.com/open/neverwinter"},{"title":"Lost Ark","thumbnail":"https://www.freetogame.com/g/517/thumbnail.jpg","short_description":"Smilegate’s free-to-play multiplayer ARPG is a massive adventure filled with lands waiting to be explored, people waiting to be met, and an ancient evil waiting to be destroyed.","game_url":"https://www.freetogame.com/open/lost-ark"},{"title":"Genshin Impact","thumbnail":"https://www.freetogame.com/g/475/thumbnail.jpg","short_description":"If you’ve been looking for a game to scratch that open-world action RPG itch, one with perhaps a bit of Asian flair, then you’re going to want to check out miHoYo’s Genshin Impact.","game_url":"https://www.freetogame.com/open/genshin-impact"},{"title":"Hero Wars: Dominion Era","thumbnail":"https://www.freetogame.com/g/620/thumbnail.jpg","short_description":"A free-to-play fantasy MMORPG where players assemble teams of heroes to battle against powerful enemies.","game_url":"https://www.freetogame.com/open/hero-wars"},{"title":"World of Warships","thumbnail":"https://www.freetogame.com/g/9/thumbnail.jpg","short_description":"A 3D free to play naval action-themed MMO from the creators of World of Tanks! ","game_url":"https://www.freetogame.com/open/world-of-warships"},{"title":"World of Tanks","thumbnail":"https://www.freetogame.com/g/2/thumbnail2.jpg","short_description":"If you like blowing up tanks, with a quick and intense game style you will love this game!","game_url":"https://www.freetogame.com/open/world-of-tanks"},{"title":"Diablo Immortal","thumbnail":"https://www.freetogame.com/g/521/thumbnail.jpg","short_description":"Built for mobile and also released on PC, Diablo Immortal fills in the gaps between Diablo II and III in an MMOARPG environment.","game_url":"https://www.freetogame.com/open/diablo-immortal"},{"title":"Phantasy Star Online 2 New Genesis","thumbnail":"https://www.freetogame.com/g/511/thumbnail.jpg","short_description":"The legacy of Phantasy Star Online 2 continues a thousand years later!","game_url":"https://www.freetogame.com/open/pso2-new-genesis"},{"title":"Crossout","thumbnail":"https://www.freetogame.com/g/5/thumbnail.jpg","short_description":"A post-apocalyptic MMO vehicle combat game! ","game_url":"https://www.freetogame.com/open/crossout"},{"title":"War Thunder","thumbnail":"https://www.freetogame.com/g/12/thumbnail.jpg","short_description":"A MMO shooter that puts you in command of hundreds of the finest combat vehicles of World War II.","game_url":"https://www.freetogame.com/open/war-thunder"},{"title":"Battlefield REDSEC","thumbnail":"https://www.freetogame.com/g/624/thumbnail.jpg","short_description":"A free-to-play battle royale game built with Battlefield DNA.","game_url":"https://www.freetogame.com/open/battlefield-redsec"},{"title":"Marvel Rivals","thumbnail":"https://www.freetogame.com/g/599/thumbnail.jpg","short_description":"A free-to-play superhero team shooter from NetEase.","game_url":"https://www.freetogame.com/open/marvel-rivals"}];
+
+const container = document.getElementById("games");
+container.innerHTML = gamesData.map(g => `
+<div class="game-card">
+  <img src="${g.thumbnail}" alt="${g.title}">
+  <div class="content">
+    <h3>${g.title}</h3>
+    <p>${g.short_description}</p>
+    <a href="${g.game_url}" target="_blank">العب الآن</a>
+  </div>
+</div>
+`).join("");
+</script>
+
+</body>
+</html>
