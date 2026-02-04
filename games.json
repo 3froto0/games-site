@@ -1,0 +1,17 @@
+{
+  "games": [
+    {
+      "title": "Game 1",
+      "thumbnail": "https://www.freetogame.com/g/1/thumbnail.jpg",
+      "short_description": "وصف قصير للعبة 1",
+      "game_url": "https://www.freetogame.com/game/1"
+    },
+    {
+      "title": "Game 2",
+      "thumbnail": "https://www.freetogame.com/g/2/thumbnail.jpg",
+      "short_description": "وصف قصير للعبة 2",
+      "game_url": "https://www.freetogame.com/game/2"
+    }
+    // … أول 20 لعبة
+  ]
+}
